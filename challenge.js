@@ -4,7 +4,6 @@ console.log('>>>>>>>>>>CHALLENGE 1');
 var array1 = [2, 10, 8, 5];
 var array2 = [4, 25, 7, 13, 15, 8];
 
-
 function sortNumber (a, b){
   return b - a;
 }
@@ -27,59 +26,55 @@ console.log('>>>>>>>>>> END');
 // CHALLENGE 2
 console.log('>>>>>>>>>>CHALLENGE 2');
 
-var array3 = [4, 10, 34, 8, 3, 9, 17];
-var array4 = [5, 7, 11, 88, 4, 10];
+var array3 = [4, 10, 34, 8, 3, 9, 17, 76, 12];
+var array4 = [5, 7, 11, 88];
 
 // console.log(array3);
 // console.log(array4);
 
-// Define whether there is an odd or even element array 
-var oddOrEven = function (array){
-  var num = array.length % 2; 
-  if (num == 0){
-    // console.log(num, 'even num');
-    return true;
-  }
-  else {
-    // console.log(num, 'odd num');
-    return false;
-  }
-}
+var averageMedian = function(array) {
+  var middle = array.length / 2;
 
-var medianOf2 = function(array) {
-  var middle = array.length/ 2;
-  // console.log('this is the half of the array length ' + middle);
-  var index1 = middle-1;
-  var index2 = middle
-  var index3 = middle+1;
-  index1 = Math.floor(index1);
-  index2 = Math.floor(index2);
-  index3 = Math.floor(index3);
+  var index1 = Math.floor(middle-1);
+  var index2 = Math.floor(middle);
+  var index3 = Math.floor(middle+1);
+
+  // console.log(index1, index2, index3);
 
   var median2 = (array[index1] + array[index2]) / 2;
   var median3 = (array[index1] + array[index2] + array[index3]) / 3;
 
-  if (oddOrEven(array) == true){
-    console.log(median2);
+  var oddEven = array.length % 2;
+
+  if (oddEven == 0){
+    console.log('The average of the median of this array is ' + median2);
     return (median2);
-  } else{
-    console.log(median3);
+  }
+  else {
+    console.log('The average of the median of this array is ' + median3);
     return (median3);
   }
 }
 
-medianOf2(array3);
-medianOf2(array4);
-
+averageMedian(array3);
+averageMedian(array4);
 
 
 console.log('>>>>>>>>>> END');
 // CHALLENGE 3
-
 console.log('>>>>>>>>>>CHALLENGE 3');
 
+var sentence = 'My name is Cassandra Mak!';
+console.log(sentence);
+
+var removeDuplicates = function(string){
+
+}
 
 
+
+
+console.log('>>>>>>>>>> END');
 // CHALLENGE 4
 
 console.log('>>>>>>>>>>CHALLENGE 4');
